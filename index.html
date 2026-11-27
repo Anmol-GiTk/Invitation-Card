@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- WhatsApp / Social Link Preview Card (Open Graph) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anmol-gitk.github.io/Invitation-Card/" />
+  <meta property="og:title" content="Digital Invitation" />
+  <meta property="og:description"
+    content="Aapke pyaar aur aashirwad ke saath, hamare is pavitra avsar par dil se aamantrit karte hain." />
+  <meta property="og:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Twitter / X Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shubh Vivah — Anmol & Ananya" />
+  <meta name="twitter:description"
+    content="Aapke pyaar aur aashirwad ke saath, hamare is pavitra avsar par dil se aamantrit karte hain." />
+  <meta name="twitter:image" content="https://YOUR-USERNAME.github.io/YOUR-REPO-NAME/preview.jpg" />
+
+  <title>Shubh Nimantran — Digital Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@600;700;800&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,600&family=Poppins:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="theme-maroon">
+  <!-- Golden Scroll Progress Ribbon -->
+  <div id="scroll-progress"></div>
+
+  <!-- Floating Falling Petals Canvas -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- Rotating Parallax Mandala Backdrop -->
+  <div class="mandala-backdrop" aria-hidden="true">
+    <svg viewBox="0 0 200 200" class="mandala-svg">
+      <g fill="none" stroke="currentColor" stroke-width="0.6">
+        <circle cx="100" cy="100" r="92" stroke-dasharray="3 3" />
+        <circle cx="100" cy="100" r="78" />
+        <circle cx="100" cy="100" r="62" stroke-dasharray="2 4" />
+        <circle cx="100" cy="100" r="44" />
+        <polygon points="100,8 122,78 192,100 122,122 100,192 78,122 8,100 78,78" />
+        <polygon points="35,35 100,66 165,35 134,100 165,165 100,134 35,165 66,100" />
+      </g>
+    </svg>
+  </div>
+
+  <!-- Floating Music Control -->
+  <button id="music-toggle" class="floating-music-btn" title="Play / Pause Auspicious Instrumental"
+    aria-label="Toggle Background Music">
+    <span class="music-icon" id="music-icon">♪</span>
+    <span class="music-label" id="music-label">Shehnai</span>
+  </button>
+
+  <!-- Host-Only Customize Trigger (Hidden by default; shown ONLY after PIN login) -->
+  <button id="host-customize-btn" class="floating-host-btn hidden" title="Open Host Customize Studio">
+    ✎ Customize Card
+  </button>
+
+  <!-- Main Invitation Wrapper -->
+  <main class="invitation-container">
+    <!-- SECTION 1: HERO -->
+    <section class="card-section section-hero reveal-section" data-bg="hero">
+      <div class="royal-frame">
+        <div class="corner-ornament top-left"></div>
+        <div class="corner-ornament top-right"></div>
+        <div class="corner-ornament bottom-left"></div>
+        <div class="corner-ornament bottom-right"></div>
+
+        <!-- Secret Host Access Trigger (Triple-Tap / Triple-Click here) -->
+        <div id="secret-kalash-trigger" class="shubh-header" title="Shubh Aarambh">
+          <div class="kalash-emblem">🪷</div>
+          <p id="disp-mantra" class="sanskrit-mantra">|| Shri Ganeshaya Namah ||</p>
+        </div>
+
+        <p id="disp-tagline" class="invite-tagline">With the blessings of the Almighty &amp; our Elders, we cordially
+          invite you to the</p>
+        <h1 id="disp-event-title" class="main-event-title shimmer-gold">Shubh Vivah</h1>
+
+        <div class="ornate-divider">
+          <span></span><i>❖</i><span></span>
+        </div>
+
+        <h2 id="disp-main-names" class="couple-names">Anmol &amp; Ananya</h2>
+        <p id="disp-sub-names" class="parents-line">Son of Smt. Shanti Devi &amp; Shri Santosh Singh • Daughter of Smt.
+          Kavita
+          &amp; Shri Suresh Singh</p>
+
+        <div class="hero-date-pill">
+          <span id="disp-hero-date">Sunday, 14 February 2027</span>
+          <span class="dot">•</span>
+          <span id="disp-hero-city">Garhirampur,Munger
+          </span>
+        </div>
+
+        <div class="scroll-cue">
+          <span>Scroll for Nimantran</span>
+          <div class="scroll-arrow">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: DIL SE NIMANTRAN -->
+    <section class="card-section section-welcome reveal-section" data-bg="welcome">
+      <div class="section-inner">
+        <span class="section-kicker">Sneha Nimantran</span>
+        <h3 class="section-heading">Dil Se Aamantran</h3>
+        <div class="ornate-divider small"><span></span><i>✦</i><span></span></div>
+        <blockquote id="disp-welcome-msg" class="welcome-quote">
+          “Apno ke pyaar aur buzurgon ke aashirwad ke saath, hum aapko is pavitra avsar par dil se aamantrit karte hain.
+          Aapki garimamayi upasthiti hamare parivar ke liye garv aur khushi ka vishay hogi.”
+        </blockquote>
+        <p id="disp-elders-blessing" class="elders-note">
+          With Warm Regards &amp; Blessings from Dada-Dadi &amp; Nana-Nani
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: LIVE COUNTDOWN -->
+    <section class="card-section section-countdown reveal-section" data-bg="countdown">
+      <div class="section-inner">
+        <span class="section-kicker light">Shubh Muhurat Countdown</span>
+        <h3 class="section-heading light">Har Pal Ka Intezaar</h3>
+        <div class="countdown-grid" id="countdown-grid">
+          <div class="time-box">
+            <span id="cd-days">00</span>
+            <small>Days</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-hours">00</span>
+            <small>Hours</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-mins">00</span>
+            <small>Minutes</small>
+          </div>
+          <div class="time-box">
+            <span id="cd-secs">00</span>
+            <small>Seconds</small>
+          </div>
+        </div>
+        <p id="countdown-status" class="countdown-subtext"></p>
+      </div>
+    </section>
+
+    <!-- SECTION 4: KARYAKRAM VIVARAN (EVENTS ITINERARY) -->
+    <section class="card-section section-events reveal-section" data-bg="events">
+      <div class="section-inner">
+        <span class="section-kicker">Karyakram Vivaran</span>
+        <h3 class="section-heading">Auspicious Ceremonies</h3>
+        <div class="ornate-divider small"><span></span><i>❖</i><span></span></div>
+
+        <div id="events-list" class="events-cards-grid">
+          <!-- Populated dynamically from config.js / localStorage -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: VENUE & DIRECTIONS -->
+    <section class="card-section section-venue reveal-section" data-bg="venue">
+      <div class="section-inner">
+        <span class="section-kicker">Sthal &amp; Margdarshan</span>
+        <h3 class="section-heading">Celebration Venue</h3>
+        <div class="venue-card">
+          <div class="venue-icon">🏛️</div>
+          <h4 id="disp-venue-name" class="venue-title">The Royal Heritage Palace &amp; Lawns</h4>
+          <p id="disp-venue-address" class="venue-address"> Garhirampur,Munger 811211
+          </p>
+          <a id="disp-map-link"
+            href="https://www.google.com/maps/search/?api=1&amp;query=Garhi%20Rampur%20%E2%80%93%20Patam%20Road%20%C2%B7%20Anmol%E2%80%99s%20House"
+            target="_blank" rel="noopener noreferrer" class="btn-royal-primary">
+            📍 Open Google Maps Directions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: PARIVAR & DARSHANAABHILASHI -->
+    <section class="card-section section-family reveal-section" data-bg="family">
+      <div class="section-inner">
+        <span class="section-kicker">Parivarjan</span>
+        <h3 class="section-heading">Swagatotsuk &amp; Darshanaabhilashi</h3>
+        <div class="ornate-divider small"><span></span><i>✦</i><span></span></div>
+
+        <div class="family-grid">
+          <div class="family-box">
+            <h4>Swagatotsuk (Hosts)</h4>
+            <p id="disp-hosts">Smt. Shanti Devi &amp; Shri Santosh Singh</p>
+          </div>
+          <div class="family-box">
+            <h4>Darshanaabhilashi</h4>
+            <p id="disp-darshan"> Complete Singh Parivar</p>
+          </div>
+          <div class="family-box full-width">
+            <h4>Bal Aagrah (Kids' Request)</h4>
+            <p id="disp-kids">“Hamare Chachu ki shaadi mein jalool-jalool aana!” — Aarohi, Vihaan &amp; Kavya</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: RSVP & BLESSINGS WALL -->
+    <section class="card-section section-rsvp reveal-section" data-bg="rsvp">
+      <div class="section-inner">
+        <span class="section-kicker">Aashirwad &amp; Upasthiti</span>
+        <h3 class="section-heading">RSVP &amp; Blessings</h3>
+
+        <form id="rsvp-form" class="rsvp-form">
+          <div class="form-row">
+            <input type="text" id="guest-name" placeholder="Aapka Shubh Naam (Your Name) *" required />
+            <select id="guest-count">
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests" selected>2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4 Guests">4 Guests</option>
+              <option value="5+ Family">5+ Family Members</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <select id="guest-attending">
+              <option value="Zaroor Aayenge (Attending)">🙏 Zaroor Aayenge (Joyfully Attending)</option>
+              <option value="Dil Se Aashirwad (Sending Blessings)">💐 Dil Se Aashirwad (Sending Warm Blessings)</option>
+            </select>
+          </div>
+          <textarea id="guest-blessing" rows="3"
+            placeholder="Apna pyaar bhara aashirwad ya sandesh likhein..."></textarea>
+          <button type="submit" class="btn-royal-primary full-btn">Send Blessings &amp; Confirm RSVP</button>
+        </form>
+
+        <div id="blessings-wall" class="blessings-wall">
+          <!-- Guest wishes appear here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER & WHATSAPP SHARE -->
+    <footer class="invitation-footer">
+      <p id="disp-footer-note">Aapke aagman ki pratiksha mein — Singh Parivar</p>
+      <button id="whatsapp-share-btn" class="btn-whatsapp">
+        📲 Share Invitation on WhatsApp
+      </button>
+    </footer>
+  </main>
+
+  <!-- =========================================================
+       HOST PIN LOCK MODAL (Prevents Guests from Editing)
+       ========================================================= -->
+  <div id="pin-modal" class="modal-overlay hidden" role="dialog" aria-modal="true">
+    <div class="modal-card pin-modal-card">
+      <button id="close-pin-modal" class="close-x" aria-label="Close">✕</button>
+      <div class="modal-badge">🔒 Host Only Access</div>
+      <h3>Enter Host Security PIN</h3>
+      <p class="modal-sub">Sirf host hi is card ko customize kar sakte hain. Guests ko yeh option kabhi nahi dikhega.
+      </p>
+      <input type="password" id="host-pin-input" maxlength="8" placeholder="Enter PIN" />
+      <p id="pin-error" class="error-msg hidden">Galat PIN! Kripya sahi Host PIN dalein.</p>
+      <button id="verify-pin-btn" class="btn-royal-primary full-btn">Unlock Host Studio</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       HOST-ONLY CUSTOMIZE DRAWER
+       ========================================================= -->
+  <aside id="customize-drawer" class="customize-drawer hidden" aria-label="Host Customization Panel">
+    <div class="drawer-header">
+      <div>
+        <span class="host-pill">HOST STUDIO</span>
+        <h3>Customize Invitation</h3>
+      </div>
+      <button id="close-drawer-btn" class="close-x" aria-label="Close Drawer">✕</button>
+    </div>
+
+    <div class="drawer-body">
+      <!-- Ceremony Preset Switcher -->
+      <div class="control-group">
+        <label>1. Ceremony Template Preset</label>
+        <div class="preset-btns">
+          <button type="button" class="preset-btn" data-preset="marriage">💍 Shaadi</button>
+          <button type="button" class="preset-btn" data-preset="janeu">🕉️ Janeu</button>
+          <button type="button" class="preset-btn" data-preset="mundan">👶 Mundan</button>
+        </div>
+      </div>
+
+      <!-- Royal Colour Theme -->
+      <div class="control-group">
+        <label>2. Royal Colour Palette (14 Themes)</label>
+        <div class="theme-swatches" style="flex-wrap: wrap; gap: 10px;">
+          <button type="button" class="swatch-btn" data-theme="theme-maroon" style="background:#7A1C1C;"
+            title="Shahi Maroon & Gold"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-emerald" style="background:#134E4A;"
+            title="Rajwada Emerald & Gold"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-sindoor" style="background:#9B111E;"
+            title="Banarasi Sindoor"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-midnight" style="background:#1E293B;"
+            title="Midnight Royal & Rose Gold"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-gold-ivory" style="background:#D4AF37;"
+            title="Shahi Gold & Ivory"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-silver-wine" style="background:#C0C7D1;"
+            title="Platinum Silver & Wine"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-gold-plum" style="background:#4A1942;"
+            title="Champagne Gold & Plum"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-silver-slate" style="background:#94A3B8;"
+            title="Moonlight Silver & Slate"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-neon-rose" style="background:#FF2A85;"
+            title="Neon Rose & Cyber Gold"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-neon-cyan" style="background:#00E5FF;"
+            title="Neon Cyan & Royal Indigo"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-neon-lime" style="background:#39FF14;"
+            title="Neon Lime & Obsidian"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-rose-gold" style="background:#E09F8C;"
+            title="Rose Gold & Blush Silk"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-bronze-teal" style="background:#CD7F32;"
+            title="Antique Bronze & Teal"></button>
+          <button type="button" class="swatch-btn" data-theme="theme-neon-violet" style="background:#C77DFF;"
+            title="Electric Violet & Silver"></button>
+        </div>
+      </div>
+
+
+      <!-- Core Details -->
+      <div class="control-group">
+        <label>Shubh Mantra</label>
+        <input type="text" id="inp-mantra" />
+      </div>
+
+      <div class="control-group">
+        <label>Ceremony Title</label>
+        <input type="text" id="inp-event-title" />
+      </div>
+
+      <div class="control-group">
+        <label>Main Name(s) (Dulha-Dulhan / Child)</label>
+        <input type="text" id="inp-main-names" />
+      </div>
+
+      <div class="control-group">
+        <label>Parents / Family Subtitle</label>
+        <input type="text" id="inp-sub-names" />
+      </div>
+
+      <div class="control-group">
+        <label>Event Date Display Text</label>
+        <input type="text" id="inp-hero-date" />
+      </div>
+
+      <div class="control-group">
+        <label>Countdown Target Date &amp; Time</label>
+        <input type="datetime-local" id="inp-countdown-date" />
+      </div>
+
+      <div class="control-group">
+        <label>City</label>
+        <input type="text" id="inp-hero-city" />
+      </div>
+
+      <div class="control-group">
+        <label>Dil Se Nimantran Message</label>
+        <textarea id="inp-welcome-msg" rows="3"></textarea>
+      </div>
+
+      <!-- Sub-Events Editor -->
+      <div class="control-group">
+        <label>Karyakram (Functions List)</label>
+        <div id="sub-events-editor"></div>
+        <button type="button" id="add-event-btn" class="btn-secondary-small">+ Add Function</button>
+      </div>
+
+      <!-- Venue -->
+      <div class="control-group">
+        <label>Venue Name</label>
+        <input type="text" id="inp-venue-name" />
+      </div>
+
+      <div class="control-group">
+        <label>Venue Full Address</label>
+        <input type="text" id="inp-venue-address" />
+      </div>
+
+      <div class="control-group">
+        <label>Google Maps Link</label>
+        <input type="url" id="inp-map-link" />
+      </div>
+
+      <!-- Parivar -->
+      <div class="control-group">
+        <label>Swagatotsuk (Hosts)</label>
+        <input type="text" id="inp-hosts" />
+      </div>
+
+      <div class="control-group">
+        <label>Darshanaabhilashi</label>
+        <textarea id="inp-darshan" rows="2"></textarea>
+      </div>
+
+      <div class="control-group">
+        <label>Bal Aagrah (Kids' Line)</label>
+        <input type="text" id="inp-kids" />
+      </div>
+
+      <!-- Security & Permanent Export -->
+      <div class="control-group security-box">
+        <label>Change Host PIN (Current session)</label>
+        <input type="text" id="inp-new-pin" maxlength="8" placeholder="New 4-6 digit PIN" />
+      </div>
+
+      <div class="drawer-actions">
+        <button type="button" id="save-changes-btn" class="btn-royal-primary full-btn">✓ Save Preview Changes</button>
+        <button type="button" id="export-config-btn" class="btn-outline-gold full-btn">⬇ Download config.js (For
+          Permanent Hosting)</button>
+        <button type="button" id="copy-guest-link-btn" class="btn-whatsapp full-btn">🔗 Copy Clean Guest Share
+          Link</button>
+        <button type="button" id="lock-host-btn" class="btn-danger-text">🔒 Lock Host Mode (View as Guest)</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast hidden"></div>
+
+  <!-- Load Permanent Default Config First, then App Logic -->
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

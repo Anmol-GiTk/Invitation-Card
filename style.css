@@ -1,0 +1,1179 @@
+/* =========================================================
+   ROYAL INDIAN INVITATION — SCROLL-DRIVEN STYLESHEET
+   ========================================================= */
+
+:root {
+  --bg-page: #FAF6F0;
+  --bg-card: rgba(255, 252, 247, 0.94);
+  --primary: #7A1C1C;
+  --primary-dark: #521010;
+  --accent-gold: #C5A059;
+  --accent-gold-light: #E8D2A0;
+  --text-main: #2C1E16;
+  --text-muted: #6B5344;
+  --border-gold: rgba(197, 160, 89, 0.55);
+  --shadow-royal: 0 20px 50px rgba(44, 30, 22, 0.12);
+}
+
+/* Theme Variations */
+/* =========================================================
+   ALL 14 ROYAL, GOLD, SILVER & NEON THEMES
+   ========================================================= */
+body.theme-maroon {
+  --bg-page: #FAF6F0;
+  --bg-card: rgba(255, 252, 247, 0.94);
+  --primary: #7A1C1C;
+  --primary-dark: #4E0F0F;
+  --accent-gold: #be9d60;
+  --accent-gold-light: #d68b08;
+  --text-main: #2C1E16;
+  --text-muted: #6B5344;
+}
+
+body.theme-emerald {
+  --bg-page: #F2F7F6;
+  --bg-card: rgba(255, 253, 249, 0.94);
+  --primary: #134E4A;
+  --primary-dark: #0A322F;
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #365d7f;
+  --text-main: #102A28;
+  --text-muted: #47625F;
+}
+
+body.theme-sindoor {
+  --bg-page: #FDF5F5;
+  --bg-card: rgba(255, 252, 252, 0.94);
+  --primary: #f70505;
+  --primary-dark: #630811;
+  --accent-gold: #D4A359;
+  --accent-gold-light: #d55b5b;
+  --text-main: #2B1014;
+  --text-muted: #6E474D;
+}
+
+body.theme-midnight {
+  --bg-page: #0F172A;
+  --bg-card: rgba(30, 41, 59, 0.92);
+  --primary: #334155;
+  --primary-dark: #0F172A;
+  --accent-gold: #E0A96D;
+  --accent-gold-light: #F6D5B0;
+  --text-main: #F8FAFC;
+  --text-muted: #CBD5E1;
+}
+
+/* 1. Shahi Gold & Ivory */
+body.theme-gold-ivory {
+  --bg-page: #FBF7F0;
+  --bg-card: rgba(255, 252, 245, 0.95);
+  --primary: #8B5A2B;
+  --primary-dark: #5E3B1B;
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #dbaf0f;
+  --text-main: #2A1D12;
+  --text-muted: #6E5844;
+}
+
+/* 2. Platinum Silver & Wine */
+body.theme-silver-wine {
+  --bg-page: #F4F5F7;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --primary: #858384;
+  --primary-dark: #380D20;
+  --accent-gold: #385177;
+  --accent-gold-light: #2c3c50;
+  --text-main: #1F1A1D;
+  --text-muted: #5C5258;
+}
+
+/* 3. Champagne Gold & Plum */
+body.theme-gold-plum {
+  --bg-page: #FAF5F8;
+  --bg-card: rgba(255, 251, 254, 0.95);
+  --primary: #4A1942;
+  --primary-dark: #2E0D29;
+  --accent-gold: #DFB86C;
+  --accent-gold-light: #f8c658;
+  --text-main: #241221;
+  --text-muted: #664961;
+}
+
+/* 4. Moonlight Silver & Slate */
+body.theme-silver-slate {
+  --bg-page: #EEF2F6;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --primary: #1E293B;
+  --primary-dark: #0F172A;
+  --accent-gold: #94A3B8;
+  --accent-gold-light: #CBD5E1;
+  --text-main: #0F172A;
+  --text-muted: #475569;
+}
+
+/* 5. Neon Rose & Cyber Gold */
+body.theme-neon-rose {
+  --bg-page: #140914;
+  --bg-card: rgba(34, 15, 34, 0.93);
+  --primary: #FF2A85;
+  --primary-dark: #B5125A;
+  --accent-gold: #FFD166;
+  --accent-gold-light: #FFE699;
+  --text-main: #FFF5FA;
+  --text-muted: #E5B8CE;
+}
+
+/* 6. Neon Cyan & Royal Indigo */
+body.theme-neon-cyan {
+  --bg-page: #080D1A;
+  --bg-card: rgba(14, 24, 46, 0.93);
+  --primary: #00E5FF;
+  --primary-dark: #0097A7;
+  --accent-gold: #A78BFA;
+  --accent-gold-light: #DDD6FE;
+  --text-main: #F0FAFF;
+  --text-muted: #9FB8CC;
+}
+
+/* 7. Neon Lime & Obsidian */
+body.theme-neon-lime {
+  --bg-page: #0B0F0C;
+  --bg-card: rgba(18, 26, 20, 0.93);
+  --primary: #39FF14;
+  --primary-dark: #1FB800;
+  --accent-gold: #E2E8F0;
+  --accent-gold-light: #FFFFFF;
+  --text-main: #F2FFF0;
+  --text-muted: #A7C4A3;
+}
+
+/* 8. Rose Gold & Blush Silk */
+body.theme-rose-gold {
+  --bg-page: #FDF6F5;
+  --bg-card: rgba(255, 252, 251, 0.95);
+  --primary: #8C3B4A;
+  --primary-dark: #5E222D;
+  --accent-gold: #E09F8C;
+  --accent-gold-light: #F7D4C8;
+  --text-main: #2D191D;
+  --text-muted: #735359;
+}
+
+/* 9. Antique Bronze & Teal */
+body.theme-bronze-teal {
+  --bg-page: #F3F7F6;
+  --bg-card: rgba(255, 254, 252, 0.95);
+  --primary: #0F4C5C;
+  --primary-dark: #082E38;
+  --accent-gold: #CD7F32;
+  --accent-gold-light: #EBB682;
+  --text-main: #102429;
+  --text-muted: #48636A;
+}
+
+/* 10. Electric Violet & Silver */
+body.theme-neon-violet {
+  --bg-page: #110B1E;
+  --bg-card: rgba(28, 18, 48, 0.93);
+  --primary: #C77DFF;
+  --primary-dark: #7B2CBF;
+  --accent-gold: #E2E8F0;
+  --accent-gold-light: #FFDD00;
+  --text-main: #F8F4FF;
+  --text-muted: #C2B4DC;
+}
+
+/* Scroll ke dauran bhi selected theme ka background variable hi chale */
+body[data-active-section] {
+  background-color: var(--bg-page);
+}
+
+/* Sabhi cards & frames ko active theme variables se sync karein */
+body[class*="theme-"] .royal-frame {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--accent-gold);
+}
+
+body[class*="theme-"] .section-inner,
+body[class*="theme-"] .event-item-card,
+body[class*="theme-"] .venue-card,
+body[class*="theme-"] .family-box,
+body[class*="theme-"] .blessing-item {
+  background: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--accent-gold);
+}
+
+body[class*="theme-neon"] .royal-frame,
+body[class*="theme-neon"] .section-inner,
+body[class*="theme-neon"] .event-item-card,
+body[class*="theme-neon"] .venue-card,
+body[class*="theme-neon"] .family-box,
+body[class*="theme-neon"] .blessing-item {
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.65;
+  overflow-x: hidden;
+  transition: background-color 0.85s ease, color 0.5s ease;
+}
+
+/* Golden Scroll Ribbon */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--accent-gold), var(--primary));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+}
+
+/* Floating Petals Canvas */
+#petal-canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Rotating Parallax Mandala */
+.mandala-backdrop {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: min(85vw, 680px);
+  height: min(85vw, 680px);
+  transform: translate(-50%, -50%);
+  color: var(--accent-gold);
+  opacity: 0.13;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.mandala-svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.15s linear;
+}
+
+.sub-event-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.btn-remove-event {
+  background: linear-gradient(135deg, #FFF1F2, #FFE4E6);
+  color: #9F1239;
+  border: 1px solid #FDA4AF;
+  border-radius: 999px;
+  /* Pill / Oval shape */
+  padding: 4px 12px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-event:hover {
+  background: linear-gradient(135deg, #E11D48, #BE123C);
+  color: #FFFFFF;
+  border-color: #BE123C;
+  transform: translateY(-1px);
+}
+
+/* Floating Buttons */
+.floating-music-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--primary);
+  color: #FFFDF9;
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 50px;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, background 0.3s ease;
+}
+
+.floating-music-btn:hover {
+  transform: translateY(-2px);
+}
+
+.floating-music-btn.playing .music-icon {
+  animation: pulseNote 1.2s infinite ease-in-out;
+}
+
+@keyframes pulseNote {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.floating-host-btn {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 950;
+  background: var(--primary);
+  color: #FFFDF9;
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 50px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.25s ease;
+}
+
+.floating-host-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.04);
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Main Container */
+.invitation-container {
+  position: relative;
+  z-index: 5;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px 16px 80px;
+}
+
+/* Section Cards */
+.card-section {
+  margin-bottom: 34px;
+  opacity: 0;
+  transform: translateY(36px) scale(0.985);
+  transition: opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card-section.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.section-inner {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 22px;
+  padding: 42px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-royal);
+  backdrop-filter: blur(8px);
+}
+
+/* Hero Section */
+.royal-frame {
+  position: relative;
+  background: linear-gradient(180deg, #FFFDF9 0%, #FBF3E6 100%);
+  border: 2px solid var(--accent-gold);
+  border-radius: 24px;
+  padding: 52px 24px 44px;
+  text-align: center;
+  box-shadow: var(--shadow-royal);
+}
+
+.royal-frame::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(197, 160, 89, 0.45);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.corner-ornament {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border-color: var(--primary);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.top-left {
+  top: 14px;
+  left: 14px;
+  border-width: 2px 0 0 2px;
+}
+
+.top-right {
+  top: 14px;
+  right: 14px;
+  border-width: 2px 2px 0 0;
+}
+
+.bottom-left {
+  bottom: 14px;
+  left: 14px;
+  border-width: 0 0 2px 2px;
+}
+
+.bottom-right {
+  bottom: 14px;
+  right: 14px;
+  border-width: 0 2px 2px 0;
+}
+
+.shubh-header {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.kalash-emblem {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.sanskrit-mantra {
+  font-family: 'Cinzel', serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--primary);
+}
+
+.invite-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.main-event-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  font-weight: 900;
+  color: var(--primary);
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.shimmer-gold {
+  background: linear-gradient(90deg, var(--primary) 0%, #B8860B 45%, var(--primary) 90%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShine 5s linear infinite;
+}
+
+@keyframes goldShine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.ornate-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 18px auto;
+  max-width: 280px;
+}
+
+.ornate-divider.small {
+  max-width: 200px;
+  margin: 12px auto 22px;
+}
+
+.ornate-divider span {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+
+.ornate-divider i {
+  font-style: normal;
+  color: var(--accent-gold);
+  font-size: 1rem;
+}
+
+.couple-names {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.65rem, 5vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.parents-line {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto 22px;
+}
+
+.hero-date-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: var(--primary);
+  color: #FFFDF9;
+  border: 1px solid var(--accent-gold);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.hero-date-pill .dot {
+  color: var(--accent-gold);
+}
+
+.scroll-cue {
+  margin-top: 28px;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+}
+
+.scroll-arrow {
+  font-size: 1.1rem;
+  color: var(--primary);
+  animation: bounceDown 1.8s infinite;
+}
+
+@keyframes bounceDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+/* Typography & Section Headings */
+.section-kicker {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.section-kicker.light {
+  color: var(--accent-gold-light);
+}
+
+.section-heading {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.section-heading.light {
+  color: #FFFDF9;
+}
+
+/* Welcome Quote */
+.welcome-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.2rem, 3.2vw, 1.48rem);
+  font-weight: 600;
+  color: var(--text-main);
+  max-width: 600px;
+  margin: 0 auto 16px;
+  line-height: 1.7;
+}
+
+.elders-note {
+  font-size: 0.88rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Countdown Royal Velvet Section */
+.section-countdown .section-inner {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: #f8f0b9;
+  border: 1.5px solid var(--accent-gold);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 480px;
+  margin: 24px auto 12px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(232, 210, 160, 0.4);
+  border-radius: 14px;
+  padding: 14px 8px;
+}
+
+.time-box span {
+  display: block;
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--accent-gold-light);
+}
+
+.time-box small {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.85;
+}
+
+.countdown-subtext {
+  font-size: 0.85rem;
+  color: var(--accent-gold-light);
+  margin-top: 8px;
+}
+
+/* Events Itinerary Cards */
+.events-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.event-item-card {
+  background: #FFFDF9;
+  border: 1px solid var(--border-gold);
+  border-top: 4px solid var(--primary);
+  border-radius: 16px;
+  padding: 22px 18px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 26px rgba(122, 28, 28, 0.12);
+}
+
+.event-item-card h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.event-meta {
+  font-size: 0.86rem;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.event-dress {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 0.76rem;
+  background: #F6EFE4;
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--border-gold);
+}
+
+/* Venue Card */
+.venue-card {
+  margin-top: 16px;
+  padding: 24px 18px;
+  background: #FFFDF9;
+  border-radius: 16px;
+  border: 1px dashed var(--accent-gold);
+}
+
+.venue-icon {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.venue-title {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.venue-address {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 20px;
+}
+
+/* Buttons */
+.btn-royal-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: #FFFDF9;
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 50px;
+  padding: 12px 26px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.btn-royal-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.full-btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* Family Grid */
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.family-box {
+  background: #FFFDF9;
+  border: 1px solid var(--border-gold);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.family-box.full-width {
+  grid-column: 1 / -1;
+  background: linear-gradient(90deg, #FFFDF9, #FBF3E4, #FFFDF9);
+}
+
+.family-box h4 {
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.family-box p {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+/* RSVP & Blessings Wall */
+.rsvp-form {
+  max-width: 540px;
+  margin: 20px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-row:has(select:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  background: #FFFDF9;
+  font-family: inherit;
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.blessings-wall {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 260px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+.blessing-item {
+  background: #FFFDF9;
+  border-left: 3px solid var(--accent-gold);
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.86rem;
+}
+
+.blessing-item strong {
+  color: var(--primary);
+}
+
+/* Footer */
+.invitation-footer {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.invitation-footer p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 14px;
+}
+
+.btn-whatsapp {
+  background: #1E7E34;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(30, 126, 52, 0.25);
+  transition: transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   HOST PIN MODAL & CUSTOMIZE DRAWER
+   ========================================================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 12, 8, 0.72);
+  backdrop-filter: blur(5px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-card {
+  position: relative;
+  background: #FFFDF9;
+  border: 2px solid var(--accent-gold);
+  border-radius: 20px;
+  padding: 32px 24px;
+  max-width: 390px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.modal-badge {
+  display: inline-block;
+  background: #F6EFE4;
+  color: var(--primary);
+  font-size: 0.76rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-card h3 {
+  font-family: 'Cinzel', serif;
+  color: var(--primary);
+  margin-bottom: 6px;
+}
+
+.modal-sub {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 12px;
+  text-align: center;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  border: 1.5px solid var(--accent-gold);
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.error-msg {
+  color: #B91C1C;
+  font-size: 0.82rem;
+  margin-bottom: 10px;
+}
+
+.close-x {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+/* Customize Drawer */
+.customize-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(410px, 100vw);
+  height: 100vh;
+  background: #FFFDF9;
+  border-left: 2px solid var(--accent-gold);
+  z-index: 2500;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 40px rgba(0, 0, 0, 0.25);
+}
+
+.drawer-header {
+  position: relative;
+  padding: 18px 20px;
+  background: var(--primary);
+  color: #FFFDF9;
+  border-bottom: 1.5px solid var(--accent-gold);
+}
+
+.drawer-header .close-x {
+  color: #FFFDF9;
+  top: 18px;
+}
+
+.host-pill {
+  font-size: 0.68rem;
+  letter-spacing: 1.5px;
+  background: var(--accent-gold);
+  color: #2C1E16;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 700;
+}
+
+.drawer-header h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.15rem;
+  margin-top: 4px;
+}
+
+.drawer-body {
+  padding: 18px 20px 36px;
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.control-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.control-group input,
+.control-group textarea {
+  width: 100%;
+  padding: 9px 12px;
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 0.86rem;
+}
+
+.preset-btns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.preset-btn {
+  padding: 8px 6px;
+  border: 1px solid var(--accent-gold);
+  background: #FAF6F0;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.preset-btn:hover {
+  background: var(--primary);
+  color: #FFFDF9;
+}
+
+.theme-swatches {
+  display: flex;
+  gap: 12px;
+}
+
+.swatch-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-gold);
+  cursor: pointer;
+}
+
+.sub-event-editor-card {
+  background: #FAF6F0;
+  border: 1px solid var(--border-gold);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.btn-secondary-small {
+  background: #F6EFE4;
+  border: 1px solid var(--accent-gold);
+  color: var(--primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.btn-outline-gold {
+  background: #FFFDF9;
+  border: 1.5px solid var(--primary);
+  color: var(--primary);
+  padding: 11px 18px;
+  border-radius: 50px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-danger-text {
+  background: none;
+  border: none;
+  color: #9B111E;
+  font-size: 0.82rem;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.drawer-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #2C1E16;
+  color: #FFFDF9;
+  border: 1px solid var(--accent-gold);
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 0.86rem;
+  z-index: 3000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 600px) {
+  .section-inner {
+    padding: 32px 18px;
+  }
+
+  .royal-frame {
+    padding: 42px 16px 36px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .countdown-grid {
+    gap: 8px;
+  }
+}
+
+/* Dark / Neon Themes Card aur Background Adjustment */
+body[class*="theme-neon"] {
+  background-color: var(--bg-page) !important;
+}
+
+body[class*="theme-neon"] .royal-frame,
+body[class*="theme-neon"] .section-inner,
+body[class*="theme-neon"] .event-item-card,
+body[class*="theme-neon"] .venue-card,
+body[class*="theme-neon"] .family-box,
+body[class*="theme-neon"] .blessing-item {
+  background: rgba(22, 18, 34, 0.92) !important;
+  color: var(--text-main) !important;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.08);
+}
