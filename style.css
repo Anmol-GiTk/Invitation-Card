@@ -283,6 +283,60 @@ body {
   margin-bottom: 4px;
 }
 
+.section-visibility-manager {
+  margin-top: 16px;
+}
+
+.section-toggle-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-toggle-row {
+  display: flex;
+  flex-direction: column;
+  /* 2 lines ke liye column flex */
+  align-items: stretch;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.section-toggle-row>span {
+  font-weight: 600;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.section-toggle-actions {
+  display: flex;
+  flex-direction: row;
+  /* Buttons side-by-side line 2 mein */
+  gap: 8px;
+  width: 100%;
+}
+
+.section-toggle-actions button {
+  flex: 1;
+}
+
+.btn-add-event {
+  background: linear-gradient(135deg, #b2f896, #a5d770);
+  color: #1d5e02;
+  border: 1px solid #588101;
+  border-radius: 999px;
+  /* Pill / Oval shape */
+  padding: 4px 12px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
 .btn-remove-event {
   background: linear-gradient(135deg, #FFF1F2, #FFE4E6);
   color: #9F1239;
