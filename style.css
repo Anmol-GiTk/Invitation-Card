@@ -319,6 +319,10 @@ body {
   width: 100%;
 }
 
+.blessing-empty {
+  text-align: center;
+}
+
 .section-toggle-actions button {
   flex: 1;
 }

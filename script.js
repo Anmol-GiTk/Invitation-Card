@@ -791,25 +791,104 @@ document.getElementById("lock-host-btn")?.addEventListener("click", () => {
   syncHostUI();
   showToast("Host Mode Locked. Ab page Guest view mein hai.");
 });
+// =========================================================
+// RSVP & BLESSINGS WALL (PRIVATE SENDER + HOST-ONLY DELETE)
+// =========================================================
+const RSVP_STORAGE_KEY = "royal_invite_blessings_v2";
+const SENDER_ID_KEY = "royal_invite_sender_id_v1";
 
-// =========================================================
-// RSVP & BLESSINGS WALL
-// =========================================================
-const RSVP_STORAGE_KEY = "royal_invite_blessings_v1";
+function getSenderId() {
+  try {
+    let sid = localStorage.getItem(SENDER_ID_KEY);
+    if (!sid) {
+      sid = "snd_" + Math.random().toString(36).slice(2, 10) + "_" + Date.now();
+      localStorage.setItem(SENDER_ID_KEY, sid);
+    }
+    return sid;
+  } catch (e) {
+    return "guest_default";
+  }
+}
+
+function getCurrentEventScope() {
+  return toEventSlug(currentConfig?.eventTitle || "default-event");
+}
+
+function getAllBlessings() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(RSVP_STORAGE_KEY) || "[]");
+    return Array.isArray(parsed) ? parsed : [];
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveAllBlessings(list) {
+  try {
+    localStorage.setItem(RSVP_STORAGE_KEY, JSON.stringify(list));
+  } catch (e) {
+    console.warn("Blessings storage unavailable", e);
+  }
+}
+
+function deleteBlessingById(id) {
+  if (!isHostUnlocked()) {
+    showToast("Sirf Host hi blessing message delete kar sakte hain.");
+    return;
+  }
+  const updated = getAllBlessings().filter((item) => item.id !== id);
+  saveAllBlessings(updated);
+  renderBlessings();
+  showToast("Blessing message delete ho gaya.");
+}
+
 function renderBlessings() {
   const wall = document.getElementById("blessings-wall");
   if (!wall) return;
-  const list = JSON.parse(localStorage.getItem(RSVP_STORAGE_KEY) || "[]");
+
+  const activeScope = getCurrentEventScope();
+  const currentSender = getSenderId();
+  const hostMode = isHostUnlocked();
+
+  // Sirf usi event ke messages + (Host ko saare, Guest ko sirf apna bheja hua)
+  const visibleList = getAllBlessings().filter((item) => {
+    const sameEvent = (item.eventScope || "default-event") === activeScope;
+    if (!sameEvent) return false;
+    if (hostMode) return true;
+    return item.senderId === currentSender;
+  });
+
   wall.innerHTML = "";
-  list
+
+  if (visibleList.length === 0) {
+    wall.innerHTML = `<p class="blessing-empty">────── ⋆⋅𖤓⋅⋆ ──────</p>`;
+    return;
+  }
+
+  visibleList
     .slice()
     .reverse()
     .forEach((item) => {
       const div = document.createElement("div");
       div.className = "blessing-item";
-      div.innerHTML = `<strong>${escapeHtml(item.name)}</strong> (${escapeHtml(item.count)} • ${escapeHtml(item.status)})<br/><span>${escapeHtml(item.msg || "Heartiest congratulations & blessings!")}</span>`;
+      div.innerHTML = `
+        <div class="blessing-item-header">
+          <strong>${escapeHtml(item.name)}</strong> (${escapeHtml(item.count)} • ${escapeHtml(item.status)})
+          ${hostMode ? `<button type="button" class="btn-delete-blessing btn-remove-event" data-id="${escapeHtml(item.id)}">Delete</button>` : ""}
+        </div>
+        <span>${escapeHtml(item.msg || "Heartiest congratulations & blessings!")}</span>
+      `;
       wall.appendChild(div);
     });
+
+  if (hostMode) {
+    wall.querySelectorAll(".btn-delete-blessing").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.getAttribute("data-id");
+        deleteBlessingById(targetId);
+      });
+    });
+  }
 }
 
 document.getElementById("rsvp-form")?.addEventListener("submit", (e) => {
@@ -820,12 +899,20 @@ document.getElementById("rsvp-form")?.addEventListener("submit", (e) => {
   const msg = document.getElementById("guest-blessing")?.value.trim() || "";
   if (!name) return;
 
-  const list = JSON.parse(localStorage.getItem(RSVP_STORAGE_KEY) || "[]");
-  list.push({ name, count, status, msg });
-  localStorage.setItem(RSVP_STORAGE_KEY, JSON.stringify(list));
+  const list = getAllBlessings();
+  list.push({
+    id: "bl_" + Date.now() + "_" + Math.random().toString(36).slice(2, 6),
+    eventScope: getCurrentEventScope(),
+    senderId: getSenderId(),
+    name,
+    count,
+    status,
+    msg,
+  });
+  saveAllBlessings(list);
   e.target.reset();
   renderBlessings();
-  showToast("Dhanyavaad! Aapka aashirwad aur RSVP darj ho gaya hai.");
+  showToast("Dhanyavaad! Aapka aashirwad darj ho gaya hai.");
 });
 
 // WhatsApp Share
